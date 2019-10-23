@@ -1,0 +1,24 @@
+DIRCHECK = check
+DIRGNL = gnl
+DIRLST = lst
+DIRMEM = mem
+DIRPUT = put
+DIRSTD = stdlib
+DIRSTR = str
+DIROTH = other
+
+SRCLST		=	ft_lstnew.c
+SRCMEM		=	ft_bzero.c ft_memcpy.c ft_memmove.c ft_memmalloc.c
+SRCSTR		=	ft_sstrdup.c ft_strdup.c ft_strcpy.c ft_strncpy.c \
+				ft_strlcpy.c ft_strcat.c ft_strlcat.c ft_strchr.c \
+				ft_strrchr.c ft_strlen.c ft_sstrlen.c ft_strstr.c\
+				ft_strcmp.c ft_strncmp.c ft_strdel.c ft_strnew.c ft_strjoin.c \
+				ft_strequ.c ft_strclr.c ft_strsub.c ft_strjoinfree.c ft_strsplit.c \
+				ft_chardup.c ft_chardup_spec.c
+SRCPUT		=	ft_putchar_fd.c ft_putstr_fd.c ft_putnbr.c ft_putnbr_fd.c \
+				ft_putchar.c ft_putendl.c ft_putendl_fd.c ft_putstr.c
+SRCCHECK	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isspace.c \
+				isbin.c sisdigit.c
+SRCSTDLIB	=	ft_atoi.c ft_atoc.c ft_atol.c ft_atoll.c ft_itoa.c ft_lltoa.c \
+				ft_lltoa_base.c ft_ltoa_base.c ft_ulltoa_base.c ft_itoa_base.c
+SRCOTHER   =   	ft_iterative_power.c lltoa.c

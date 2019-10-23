@@ -1,0 +1,15 @@
+.idea/
+lib/
+*.a
+ft_printf
+*.dSYM
+cmake-build-debug
+objects
+libft/README.md
+save
+objects/
+a.out
+!srcs/*/*.c
+*.c.swp
+srcs/*.c.swp
+srcs/*/*.c.swp

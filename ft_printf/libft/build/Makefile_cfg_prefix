@@ -1,0 +1,15 @@
+SRCSLST		= 	$(addprefix $(DIRLST)/, $(SRCLST))
+SRCSMEM		= 	$(addprefix $(DIRMEM)/, $(SRCMEM))
+SRCSGNL		= 	$(addprefix $(DIRGNL)/, $(SRCGNL))
+#SRCSTAB	= 	$(addprefix $(DIRTAB)/, $(SRCTAB))
+SRCSSTR		= 	$(addprefix $(DIRSTR)/, $(SRCSTR))
+SRCSPUT		= 	$(addprefix $(DIRPUT)/, $(SRCPUT))
+SRCSCHECK	= 	$(addprefix $(DIRCHECK)/, $(SRCCHECK))
+SRCSSTDLIB	= 	$(addprefix $(DIRSTD)/, $(SRCSTDLIB))
+SRCSOTHER	= 	$(addprefix $(DIROTH)/, $(SRCOTHER))
+
+SRC 		=	$(SRCSCHECK) $(SRCSOTHER) $(SRCSGNL) $(SRCSLST) $(SRCSPUT) $(SRCSSTDLIB) $(SRCSMEM) $(SRCSSTR)
+OBJ 		= 	$(SRC:%.c=%.o)
+
+SRCS 		= 	$(addprefix $(SRCSDIR)/, $(SRC))
+OBJS 		= 	$(addprefix $(OBJSDIR)/, $(OBJ))

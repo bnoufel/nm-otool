@@ -1,0 +1,16 @@
+RED 		= 	\x1b[31m
+YELLOW	 	= 	\x1b[33m
+GREEN 		= 	\x1b[32m
+RESET 		= 	\x1b[0m
+SRCSDIR 		= 	../srcs
+OBJSDIR 		= 	../objects
+LIBFTDIR		=	../libft
+LIB				=	libft.a
+LIBD      		=   $(LIBFTDIR)/$(LIB)
+INCLUDES 		= 	../includes
+HEADERLIB   	=   $(LIBFTDIR)/$(INCLUDES)/
+DEBUG		=	-g3
+CFLAGS 		=  	-Wall -Werror -Wextra -g3
+CC 			= 	gcc $(CFLAGS)
+HEADER		=	ft_printf.h internal.h
+HEADERS		=	$(addprefix $(INCLUDES)/, $(HEADER))

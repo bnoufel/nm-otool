@@ -1,0 +1,12 @@
+RED 		= 	\x1b[31m
+YELLOW	 	= 	\x1b[33m
+GREEN 		= 	\x1b[32m
+RESET 		= 	\x1b[0m
+SRCSDIR 	= 	../srcs
+OBJSDIR 	= 	../objects
+INCLUDES 	= 	../includes
+DEBUG		=	-g3 --std=c89
+CFLAGS 		=  	-Wall -Werror -Wextra
+CC 			= 	gcc $(CFLAGS) $(DEBUG)
+HEADER		=	libft.h
+HEADERS		=	$(addprefix $(INCLUDES)/, $(HEADER))

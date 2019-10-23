@@ -1,0 +1,6 @@
+$(FT_OTOOL): $(PRINTFDIR)/$(LIB) $(OBJSDIR) $(OBJSOTOOL)
+	@echo "Compiling $(FT_OTOOL)${RESET} [${GREEN}✔${RESET}]"
+	@$(CC) $(LDFLAGS) $(CCINCLUDES) $(OBJSOTOOL) -o $(FT_OTOOL)
+
+$(OBJSDIR)/$(FT_OTOOL)/%.o: $(SRCSDIR)/$(FT_OTOOL)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< $(CCINCLUDES)
