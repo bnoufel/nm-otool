@@ -45,7 +45,7 @@ bool			handle_fat(t_nm **p_list)
 
 	header = (t_fh *)(*p_list)->ptr;
 	if (!(nfat = swap_uint32(header->nfat_arch)))
-		return (err_nm(*p_list, true));
+		return (err_nm(*p_list, true, NULL));
 	arch = (t_fharch *)(header + 1);
 	if (!arch->offset || !(check_memory_file(arch, p_list)))
 		return (false);
@@ -73,7 +73,7 @@ bool			handle_fat64(t_nm **p_list)
 
 	header = (t_fh *)(*p_list)->ptr;
 	if (!(nfat = swap_uint64(header->nfat_arch)))
-		return (err_nm(*p_list, true));
+		return (err_nm(*p_list, true, NULL));
 	arch = (t_fharch64 *)(header + 1);
 	if (!arch->offset || !(check_memory_file(arch, p_list)))
 		return (false);

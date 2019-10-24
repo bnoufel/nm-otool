@@ -77,7 +77,7 @@ int			nm(t_nm **p_list);
 void		reset_section(t_nm **p_list);
 size_t		get_size_name(uint32_t stroff, t_nm **p_l);
 void		ft_byebye(t_nm *p_list);
-bool		err_nm(t_nm *lst, bool malformed);
+bool		err_nm(t_nm *lst, bool malformed, char *name);
 char		*putnamesymbol(char *str, char symbol);
 bool		handle_no_cmds(uint32_t i, uint32_t ncmds, t_nm *p_l);
 #endif

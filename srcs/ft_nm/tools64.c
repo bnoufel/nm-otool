@@ -15,7 +15,7 @@
 bool			handle_no_cmds(uint32_t i, uint32_t ncmds, t_nm *p_l)
 {
 	if (i > ncmds)
-		return (err_nm(p_l, 1));
+		return (err_nm(p_l, true, NULL));
 	return (true);
 }
 

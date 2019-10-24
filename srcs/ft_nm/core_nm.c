@@ -74,7 +74,7 @@ int				core(char *name, t_nm **p_list, uint32_t arg, uint8_t i)
 		return (0);
 	fstat(fd, &st);
 	if ((ptr = mmap(NULL, (size_t)st.st_size, PROT, MAP, fd, 0)) == MAP_FAILED)
-		return (err_nm(*p_list, false));
+		return (err_nm(*p_list, false, name));
 	else
 	{
 		if (check_file(ptr, name))
@@ -95,6 +95,6 @@ int				core(char *name, t_nm **p_list, uint32_t arg, uint8_t i)
 bool			check_memory_file(void *ptr, t_nm **lst)
 {
 	if (ptr > (*lst)->end_ptr)
-		return (err_nm(*lst, true));
+		return (err_nm(*lst, true, NULL));
 	return (true);
 }

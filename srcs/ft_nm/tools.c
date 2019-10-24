@@ -44,15 +44,16 @@ void			ft_munmap(void *ptr, size_t size)
 		exit(EXIT_FAILURE);
 }
 
-bool			err_nm(t_nm *lst, bool malformed)
+bool			err_nm(t_nm *lst, bool malformed, char *name)
 {
 	if (malformed)
 		ft_dprintf(2, "%s: malformed object\n", lst->name);
 	else
 	{
-		ft_dprintf(2, "%s: Invalid file", lst->name);
+		ft_dprintf(2, "%s: Invalid file", name);
 		ft_dprintf(2, " or can not allocate memory.\n");
 	}
-	lst->type |= IS_ERROR;
+	if (lst)
+		lst->type |= IS_ERROR;
 	return (false);
 }

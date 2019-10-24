@@ -65,7 +65,7 @@ bool			handle_64(t_nm **p_list)
 	i = -1;
 	header = (t_mh64 *)(*p_list)->ptr;
 	if (!(ncmds = header->ncmds))
-		return (err_nm(*p_list, true));
+		return (err_nm(*p_list, true, NULL));
 	lc = (void *)(*p_list)->ptr + sizeof(*header);
 	reset_section(p_list);
 	while (++i < ncmds)
